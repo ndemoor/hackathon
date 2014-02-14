@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scan</title>
+    
+    <style>
+      html, body {
+        background: #000;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+      }
+      
+      video {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        margin-left: -100%;
+        height: 100%;
+      }
+      
+      .scanline {
+        position: fixed;
+        left: 50%;
+        margin-left: -2px;
+        width: 4px;
+        top: 0;
+        bottom: 0;
+        opacity: 0.5;
+        background: #F00;
+        box-shadow: 0 0 21px 6px #F00;
+      }
+    </style>
+    
+  </head>
+  <body>
+    
+    <a href="/?code=12345678">
+      <video autoplay></video>
+    </a>
+    
+    <div class="scanline"></div>
+
+    <script>
+      navigator.getUserMedia  = navigator.getUserMedia ||
+                          navigator.webkitGetUserMedia ||
+                          navigator.mozGetUserMedia ||
+                          navigator.msGetUserMedia;
+
+      
+      var errorCallback = function(e) {
+        console.log('Reeeejected!', e);
+      };
+
+      // Not showing vendor prefixes.
+      navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
+        var video = document.querySelector('video');
+        video.src = window.URL.createObjectURL(localMediaStream);
+
+        // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
+        // See crbug.com/110938.
+        video.onloadedmetadata = function(e) {
+          // Ready to go. Do some stuff.
+        };
+      }, errorCallback);
+    </script>
+  </body>
+</html>
