@@ -25,7 +25,7 @@
   	</div>
   	<div class="row">
   		<div class="small-12 columns text-center">
-  			<img src="img/can.png" >
+  			<img width="150" src="{{product.image}}" >
   		</div>
   	</div>
   	<div class="row collapse product-infos">
@@ -35,21 +35,21 @@
   	</div>
   	<div class="row resume">
   		<div class="small-12 columns text-center">
-  			<h4>Product name</h4>
+  			<h4>{{product.name}}</h4>
   		</div>
   		<div class="small-12 columns text-center">
   			<h5>Type: <span>PMC</span></h5>
   		</div>
   		<div class="small-12 columns text-center progress-bar">
 	  		<div class="progress">
-				<span class="meter" style="width:40%;">110 years</span>
+				<span class="meter" ng-style="{width: getExpirationPercent()}">{{getExpiration()}}</span>
 			</div>
 			<div class="row">
 				<div class="small-6 columns text-left">
 					<span>Today</span>
 				</div>
 				<div class="small-6 columns text-right">
-					<span>1000 Years</span>
+					<span>60 days</span>
 				</div>
 			</div>
 		</div>
@@ -59,24 +59,24 @@
 	  		<div class="small-2 medium-1 columns text-center left-col good">
 				<i class="fa fa-leaf"></i>
 			</div>
-			<div class="small-10 medium-11 columns right-col">
-				<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</p>
+			<div class="small-10 columns right-col">
+				<p>{{product.origin_info}}</p>
 			</div>
 	  	</div>
 	  	<div class="row clear">
 	  		<div class="small-2 medium-1 columns text-center left-col middle">
 				<i class="fa fa-heart"></i>
 			</div>
-			<div class="small-10 medium-11 columns right-col">
-				<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</p>
+			<div class="small-10 columns right-col">
+				<p>{{product.recycle_info}}</p>
 			</div>
 		</div>
 		<div class="row clear">
 	  		<div class="small-2 medium-1 columns text-center left-col wrong">
 				<i class="fa fa-leaf"></i>
 			</div>
-			<div class="small-10 medium-11 columns right-col">
-				<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</p>
+			<div class="small-10 columns right-col">
+				<p>{{product.footprint_info}}</p>
 			</div>
 	  	</div>
 	</div>
