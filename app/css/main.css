@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+body, h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif; }
+
+/*********************/
+/**** MAIN STYLE ****/
+/*******************/
+p {
+  margin-bottom: 0;
+  font-size: 14px; }
+
+button, button.expand {
+  margin: 0;
+  background: #2ecc71; }
+  button i, button.expand i {
+    margin: 0 3px; }
+  button:hover, button.expand:hover {
+    background: #2eae71; }
+
+.header button {
+  font-weight: 300!important; }
+  .header button i {
+    font-size: 18px; }
+
+.row.product-infos {
+  background: #2ecc71;
+  color: #fff; }
+  .row.product-infos i {
+    margin-right: 20px;
+    line-height: 60px;
+    font-size: 12px; }
+  .row.product-infos h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0 0 0 20px;
+    height: 60px;
+    line-height: 60px; }
+
+.resume h4, .resume h5 {
+  font-size: 16px; }
+  .resume h4 span, .resume h5 span {
+    color: #2ecc71; }
+.resume h4 {
+  margin: 20px 0 0; }
+.resume h5 {
+  margin: 0 0 20px; }
+.resume .progress-bar {
+  margin-bottom: 30px; }
+  .resume .progress-bar .progress {
+    background: #b5b2b2;
+    margin-bottom: 0; }
+    .resume .progress-bar .progress .meter {
+      background: #2ecc71; }
+  .resume .progress-bar span {
+    color: #b5b2b2;
+    font-size: 12px; }
+
+.left-col {
+  min-height: 65px;
+  background: #2ecc71;
+  color: #fff;
+  font-size: 20px; }
+
+.right-col {
+  border-top: 1px solid #e5e5e5;
+  padding: 4px 15px; }

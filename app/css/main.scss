@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+$green: #2ecc71;
+$greenHover: #2eae71;
+body, h1, h2, h3, h4, h5{
+	font-family: 'Open Sans', sans-serif;
+}
+/*********************/
+/**** MAIN STYLE ****/
+/*******************/
+
+p{margin-bottom: 0; font-size: 14px;}
+button, button.expand{
+	margin: 0;
+	background: $green;
+	i{margin: 0 3px;}
+	&:hover{background: $greenHover;}
+}
+
+.header{
+	button{
+		font-weight: 300!important;
+		i{font-size: 18px;}
+	}
+}
+
+.row.product-infos{
+	background: $green;
+	color: #fff;
+
+	i{
+		margin-right: 20px;
+		line-height: 60px;
+		font-size: 12px;
+	}
+
+	h2{
+		color: #fff;
+		font-weight: 300;
+		font-size: 16px;
+		margin: 0 0 0 20px;
+		height: 60px;
+		line-height: 60px;
+	}
+}
+.resume{
+	h4, h5{
+		font-size: 16px;
+		span{color: $green;}
+	}
+	h4{margin: 20px 0 0;}
+	h5{margin: 0 0 20px;}
+	.progress-bar{
+		margin-bottom: 30px;
+		.progress{
+			background: #b5b2b2;
+			margin-bottom: 0;
+			.meter{background: $green;}
+		}
+		span{
+			color: #b5b2b2;
+			font-size: 12px;
+		}
+	}
+}
+.wrapper-evironement{
+
+}
+.left-col{
+	min-height: 65px;
+	background: $green;
+	color: #fff;
+	font-size: 20px;
+}
+.right-col{border-top: 1px solid #e5e5e5; padding: 4px 15px;}

@@ -3,5 +3,5 @@ var config   = require('config'),
     server   = require('./server');
 
 
-mongoose.connect(config.mongodb.uri, config.mongodb.options);
+//mongoose.connect(config.mongodb.uri, config.mongodb.options);
 server.listen(config.port);
