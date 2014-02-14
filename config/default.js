@@ -1,22 +1,15 @@
 'use strict';
 
-module.exports = {
-  
-  port: 80,
-  baseUrl: 'http://example.com',
-  mountDist: true,
-  
-  mongodb: {
-    uri: null,
-    options: {
-      user: null,
-      pass: null
-    }
-  },
-  
-  redis: {
-    host: null,
-    port: null
-  }
-  
-};
+module.exports = function() {
+
+  var appEnv = process.env.NODE_ENV || 'development'
+    , config = {}
+    ;
+
+
+  config.loglevel   = process.env.LOGLEVEL || 'info';
+  config.server     = require('./server')[appEnv];
+  config.mongo      = require('./mongo')[appEnv];
+
+  return config;
+}();
