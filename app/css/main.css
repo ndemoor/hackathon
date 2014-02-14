@@ -1,12 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+body {
+  background: #f1f1f1; }
+
 body, h1, h2, h3, h4, h5 {
-  font-family: 'Open Sans', sans-serif; }
-  body .row, h1 .row, h2 .row, h3 .row, h4 .row, h5 .row {
-    max-width: 100%; }
+  font-family: 'Open Sans', sans-serif;
+  /*.row{max-width: 100%;}*/ }
 
 /*********************/
 /**** MAIN STYLE ****/
 /*******************/
+.row {
+  background: #fff; }
+
 p {
   margin-bottom: 0;
   font-size: 14px; }
@@ -88,3 +93,8 @@ button, button.expand {
   border-top: 0; }
 .wrapper-alternative > .row {
   border-bottom: 1px solid #d6d6d6; }
+
+.footer {
+  margin-top: 30px;
+  background: #f1f1f1;
+  padding: 10px 0; }
