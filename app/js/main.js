@@ -7,15 +7,18 @@ $(function(){
 
 	// Call foundation accordeon
 	$(document).foundation({
-        tab: {
-            callback: function (tab){
-                console.log(tab);
-                console.log('coucou');
-            }
-        }
   	});
 	// Calcul height of Left-col
-	calculateHeight();	
+	calculateHeight();
+	$(window).resize(function() {
+		calculateHeight();
+	});
+
+	$('dd > a').click(function(){
+		setTimeout(function(){
+			calculateHeight();
+		},60);
+	})
 
 });
 

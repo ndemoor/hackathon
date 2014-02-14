@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 body, h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif; }
+  body .row, h1 .row, h2 .row, h3 .row, h4 .row, h5 .row {
+    max-width: 100%; }
 
 /*********************/
 /**** MAIN STYLE ****/
@@ -21,6 +23,9 @@ button, button.expand {
   font-weight: 300!important; }
   .header button i {
     font-size: 18px; }
+
+.accordion .content {
+  padding: 0; }
 
 .row.product-infos {
   background: #2ecc71;
@@ -72,8 +77,14 @@ button, button.expand {
   .left-col.wrong {
     background: #ee7186; }
   .left-col.alternative {
-    background: #ccc; }
+    background: #eee;
+    color: #2e2e2e; }
 
 .right-col {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #d6d6d6;
   padding: 4px 15px; }
+
+.wrapper-alternative .right-col {
+  border-top: 0; }
+.wrapper-alternative > .row {
+  border-bottom: 1px solid #d6d6d6; }

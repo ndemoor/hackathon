@@ -6,6 +6,8 @@ $red: #ee7186;
 $greenHover: #2eae71;
 body, h1, h2, h3, h4, h5{
 	font-family: 'Open Sans', sans-serif;
+
+	.row{max-width: 100%;}
 }
 /*********************/
 /**** MAIN STYLE ****/
@@ -25,7 +27,7 @@ button, button.expand{
 		i{font-size: 18px;}
 	}
 }
-
+.accordion .content{padding: 0;}
 .row.product-infos{
 	background: $green;
 	color: #fff;
@@ -79,7 +81,14 @@ button, button.expand{
 	&.wrong{background: $red;}
 
 	&.alternative{
-		background: #ccc;
+		background: #eee;
+		color: #2e2e2e;
 	}
 }
-.right-col{border-top: 1px solid #e5e5e5; padding: 4px 15px;}
+.right-col{border-top: 1px solid #d6d6d6; padding: 4px 15px;}
+.wrapper-alternative{
+	.right-col{border-top: 0; }
+	> .row{
+		border-bottom: 1px solid #d6d6d6;
+	}
+}
