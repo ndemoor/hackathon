@@ -15,17 +15,17 @@ $(function(){
 	});
 
 	$('dd > a').click(function(){
-		setTimeout(function(){
-			calculateHeight();
-		},60);
+		calculateHeight();
 	})
 
 });
 
 function calculateHeight(){
-	$('.left-col').each(function(){
-		var rowHeight = $(this).parent().height();
-		$(this).css('height' , rowHeight+'px');
-		$(this).find('i.fa').css('margin-top' , (rowHeight-15)/2 +'px');
-	})
+	setTimeout(function(){
+		$('.left-col').each(function(){
+			var rowHeight = $(this).parent().height();
+			$(this).css('height' , rowHeight+'px');
+			$(this).find('i.fa').css('margin-top' , (rowHeight-15)/2 +'px');
+		});
+	},130);
 }

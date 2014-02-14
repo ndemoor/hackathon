@@ -30,7 +30,9 @@ button, button.expand{
 		i{font-size: 18px;}
 	}
 }
+.row.wrapper-image{padding: 15px 0;}
 .accordion .content{padding: 0;}
+.content .resume{background: rgba(255, 255, 255, .6); margin-top: -20px;}
 .row.product-infos{
 	background: $green;
 	color: #fff;
